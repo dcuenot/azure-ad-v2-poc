@@ -96,7 +96,9 @@ if (!isset($_GET['code']) && !isset($_GET['scope'])) {
     echo '<div class="w3-blue w3-padding w3-large"><i class="glyphicon glyphicon-question-sign"></i> A confirmer, mais si je comprends bien :
             <ul>
                 <li>Il faut conserver l\'access_token au niveau de l\'appli cliente, et l\'utiliser pour obtenir les groupes</li>
+                <li>at_hash n\'est pas présent, donc impossible de faire un check de l\'access token</li>
                 <li>Il faut véhiculer l\'id_token au sein de nos micro-services, et par conséquent, impossible (mais est-ce grave ?) de gérer les groupes côté microservices</li>
+                <li>Dans l\'id_token, qu\'est ce qui matérialise l\'identifiant utilisateur ?</li>
             </ul>
             <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-tokens">Différences entre les tokens</a> - 
             <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-tokens#validating-tokens">Validation à faire sur les tokens JWT dans les microservices</a></div>';
